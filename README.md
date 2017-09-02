@@ -23,6 +23,8 @@ qr_code(account,one_time=True,path_qr_code="",country="TH",money="",currency="TH
 - money : money (if have)
 - currency : THB
 
+return True (if have path_qr_code) or text (if haven't path_qr_code)
+
 ## License
 
 Apache Software License 2.0
