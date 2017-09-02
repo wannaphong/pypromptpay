@@ -18,7 +18,7 @@ def qr_code(account,one_time=True,path_qr_code="",country="TH",money="",currency
         one_time="010211" # 11 ใช้ได้้หลายครั้ง
     merchant_account_information="2937" # ข้อมูลผู้ขาย
     merchant_account_information+="0016"+"A000000677010111" # หมายเลขแอปพลิเคชั่น PromptPay
-    if len(account)!=13: # ใช้บัญชีใช้เป็นเบอร์มือถือหรือไม่ ถ้าใช่
+    if len(account)!=13: # ใช้บัญชีใช้เป็นเบอร์มือถือหรือไม่ ถ้าใช่ จำนวนจะไม่เท่ากับ 13
         account=list(account)
         merchant_account_information+="011300" # 01 หมายเลขโทรศัพท์ ความยาว 13 ขึ้นต้น 00
         if country=="TH":
