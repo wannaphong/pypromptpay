@@ -6,15 +6,8 @@ os:
 python:
 - '3.6'
 
-cache:
-  directories:
-    - ~/.cache/pip
-    - ~/nltk_data
-#    - ~/pythainlp-data
-
 before_install:
 - sudo rm -f /etc/boto.cfg
 
 install:
-- pip install -r requirements.txt
 - pip install .
