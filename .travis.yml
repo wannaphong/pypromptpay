@@ -3,5 +3,5 @@ python:
   - '3.6'
 install:
   - pip install -e .
-script:
+test:
   - python setup.py test
