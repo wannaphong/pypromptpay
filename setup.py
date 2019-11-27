@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 from setuptools import setup
 from setuptools import find_packages
 requirements = [
@@ -16,6 +16,7 @@ setup(
     packages=['.'],
     package_data={'': ['LICENSE','README.md']},
     include_package_data=True,
+    test_suite="test",
     install_requires=requirements,
     license='Apache Software License 2.0',
     zip_safe=False,
