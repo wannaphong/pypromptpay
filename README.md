@@ -1,4 +1,7 @@
 # pypromptpay
+
+[![Build Status](https://travis-ci.org/wannaphongcom/pypromptpay.svg?branch=master)](https://travis-ci.org/wannaphongcom/pypromptpay)
+
 QR Code PromptPay in Python 3.
 
 ## Install
