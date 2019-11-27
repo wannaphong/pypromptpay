@@ -1,7 +1,11 @@
 language: python
 python:
   - '3.6'
+before_install:
+  - python --version
+  - pip install pytest
 install:
   - pip install .
 test:
   - python setup.py test
+script: pytest
