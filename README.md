@@ -1,8 +1,6 @@
 # pypromptpay
 QR Code PromptPay in Python 3.
 
-
-
 ## Install
 
 ```
