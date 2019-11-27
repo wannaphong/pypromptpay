@@ -6,12 +6,16 @@ requirements = [
     'CRC-ITU',
     'libscrc'
 ]
+with open("README.md", "r", encoding="utf-8") as readme_file:
+    readme = readme_file.read()
 
 setup(
     name='pypromptpay',
     version='0.4',
     description="PromptPay QR code in Python",
     author='Wannaphong Phatthiyaphaibun',
+    long_description=readme,
+    long_description_content_type="text/markdown",
     author_email='wannaphong@kkumail.com',
     url='https://github.com/wannaphongcom/pypromptpay',
     packages=['.'],
