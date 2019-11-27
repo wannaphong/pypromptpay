@@ -3,7 +3,8 @@ from setuptools import setup
 from setuptools import find_packages
 requirements = [
     'qrcode',
-    'CRC-ITU'
+    'CRC-ITU',
+    'libscrc'
 ]
 
 setup(
