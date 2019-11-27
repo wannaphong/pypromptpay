@@ -6,9 +6,5 @@ os:
 python:
 - '3.6'
 
-before_install:
-- sudo rm -f /etc/boto.cfg
-
 install:
-- pip install -U pip
 - pip install -e .
