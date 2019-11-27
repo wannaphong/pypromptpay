@@ -6,6 +6,5 @@ before_install:
   - pip install pytest
 install:
   - pip install .
-test:
-  - python setup.py test
-script: pytest
+script:
+  pypromptpay setup.py test
