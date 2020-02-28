@@ -17,7 +17,7 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     author_email='wannaphong@kkumail.com',
-    url='https://github.com/wannaphongcom/pypromptpay',
+    url='https://github.com/wannaphong/pypromptpay',
     packages=['.'],
     package_data={'': ['LICENSE','README.md']},
     include_package_data=True,
