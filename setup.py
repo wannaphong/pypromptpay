@@ -4,14 +4,14 @@ from setuptools import find_packages
 requirements = [
     'qrcode',
     'CRC-ITU',
-    'libscrc'
+    'crc16'
 ]
 with open("README.md", "r", encoding="utf-8") as readme_file:
     readme = readme_file.read()
 
 setup(
     name='pypromptpay',
-    version='0.4',
+    version='0.5',
     description="PromptPay QR code in Python",
     author='Wannaphong Phatthiyaphaibun',
     long_description=readme,

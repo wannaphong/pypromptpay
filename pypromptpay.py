@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import libscrc
+import crc16
 import qrcode
 def qr_code(account,one_time=True,path_qr_code="",country="TH",money="",currency="THB"):
     """
@@ -26,7 +26,7 @@ def qr_code(account,one_time=True,path_qr_code="",country="TH",money="",currency
         del account[0] # ตัดเลข 0 หน้าเบอร์ออก
         merchant_account_information+=''.join(account)
     else:
-        merchant_account_information+="02"+account.replace('-','') # กรณีที่ไม่รับมือถือ แสดงว่าเป็นเลขบัตรประชาชน
+        merchant_account_information+="0213"+account.replace('-','') # กรณีที่ไม่รับมือถือ แสดงว่าเป็นเลขบัตรประชาชน
     country="5802"+country # ประเทศ
     if currency=="THB":
         currency="5303"+"764" # "764"  คือเงินบาทไทย ตาม https://en.wikipedia.org/wiki/ISO_4217
@@ -37,9 +37,9 @@ def qr_code(account,one_time=True,path_qr_code="",country="TH",money="",currency
         else:
             money="54"+"0"+str(len(str(float(money))))+str(float(money)) # กรณีที่มีทศนิยมครบ
     check_sum=Version+one_time+merchant_account_information+country+currency+money+"6304" # เช็คค่า check sum
-    check_sum1=hex(libscrc.ccitt(check_sum.encode("ascii"),0xffff)).replace('0x','')
+    check_sum1=hex(crc16.crc16xmodem(check_sum.encode('ascii'),0xffff)).replace('0x','')
     if len(check_sum1)<4: # # แก้ไขข้อมูล check_sum ไม่ครบ 4 หลัก
-        check_sum1=("0"*(4-len(check_sum1)))+check_sum1
+        check_sum1 = ("0"*(4-len(check_sum1)))+check_sum1
     check_sum+=check_sum1
     if path_qr_code!="":
         img = qrcode.make(check_sum.upper())
