@@ -11,7 +11,7 @@ with open("README.md", "r", encoding="utf-8") as readme_file:
 
 setup(
     name='pypromptpay',
-    version='0.5',
+    version='0.5.1',
     description="PromptPay QR code in Python",
     author='Wannaphong Phatthiyaphaibun',
     long_description=readme,
