@@ -35,3 +35,7 @@ Apache Software License 2.0
 ## Develop
 
 Wannaphong Phatthiyaphaibun (wannaphong@kkumail.com)
+
+## Reference
+
+[แนวนโยบายการใช้มาตรฐาน Thai QR Code ในธุรกรรมการชำระเงิน](https://www.bot.or.th/Thai/FIPCS/Documents/FPG/2562/ThaiPDF/25620084.pdf)
