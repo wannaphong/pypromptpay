@@ -18,9 +18,9 @@ def qr_code(account,one_time=True,path_qr_code="",country="TH",money="",currency
         one_time ="010211" # 11 ใช้ได้้หลายครั้ง
     
     if len(account) == 10 or len(account) == 13 : 
-		merchant_account_information = "2937" # ข้อมูลผู้ขาย (เฉพาะเบอร์โทร และ บัตรประชาชน)
-	else :
-		merchant_account_information = "2939" # ข้อมูลผู้ขาย (เฉพาะเลขอ้างอิง)
+        merchant_account_information = "2937" # ข้อมูลผู้ขาย (เฉพาะเบอร์โทร และ บัตรประชาชน)
+    else :
+        merchant_account_information = "2939" # ข้อมูลผู้ขาย (เฉพาะเลขอ้างอิง)
         
     merchant_account_information += "0016"+"A000000677010111" # หมายเลขแอปพลิเคชั่น PromptPay
     if len(account) == 10: #ถ้าบัญชีนี้เป็นเบอร์โทร
@@ -31,9 +31,9 @@ def qr_code(account,one_time=True,path_qr_code="",country="TH",money="",currency
         del account[0] # ตัดเลข 0 หน้าเบอร์ออก
         merchant_account_information += ''.join(account)
     elif len(account) == 13 : #ถ้าบัญชีนี้เป็นบัตรประชาชน
-		merchant_account_information += "0213" + account.replace('-','')
+        merchant_account_information += "0213" + account.replace('-','')
     else : #ไม่ใช่เบอร์โทร และ บัตรประชาชน เป็นเลขอ้างอิง
-		merchant_account_information += "0315" + account + "5303764"
+        merchant_account_information += "0315" + account + "5303764"
     country = "5802" + country # ประเทศ
     if currency == "THB":
         currency = "5303" + "764" # "764"  คือเงินบาทไทย ตาม https://en.wikipedia.org/wiki/ISO_4217
